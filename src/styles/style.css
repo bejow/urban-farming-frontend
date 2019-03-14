@@ -1,0 +1,13 @@
+link{
+    text-decoration: none;
+}
+
+.navigationContainer{
+    display:flex;
+    justify-content: space-around;
+}
+
+.errorText{
+    color: red;
+    font-size: 18px;
+}

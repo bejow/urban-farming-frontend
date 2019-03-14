@@ -1,26 +1,33 @@
 import React, { Component } from 'react';
+import {Route, BrowserRouter as Router} from 'react-router-dom';
+import ReduxThunk from 'redux-thunk';
+import { applyMiddleware, createStore } from 'redux';
+import { Provider } from 'react-redux';
+
+import reducers from './reducers'
 import logo from './logo.svg';
-import './App.css';
+import './styles/style.css';
+import AppNavigation from './navigation/AppNavigation';
+import HomeScreen from './screens/HomeScreen'
+import SettingScreen from './screens/SettingScreen';
+import OverviewScreen from './screens/OverviewScreen';
 
 class App extends Component {
   render() {
+    const store = createStore(reducers, {}, applyMiddleware(ReduxThunk))
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
+      <Provider store={store}>
+        <div className="App">
+          <Router>
+            <div>
+              <AppNavigation/>
+              <Route exact path='/' component={HomeScreen}/>
+              <Route exact path='/settings' component={SettingScreen}/>
+              <Route exact path='/overview' component={OverviewScreen}/>
+            </div>
+          </Router>
+        </div>
+      </Provider>
     );
   }
 }
