@@ -16,7 +16,9 @@ import {
 export const getCurrentOxygen = () => {
     return (dispatch => {
         dispatch({type:FETCH_CURRENT_OXYGEN});
-        fetch('http://localhost:3000/oxygen')
+        fetch('http://localhost:8000/api/DataPoints/Oxygen', {
+            headers: {'Content-Type':'application/json'},
+        })
         .then(res => res.json())
         .then((result) => {
             //successful 
@@ -31,7 +33,9 @@ export const getCurrentOxygen = () => {
 export const getCurrentPH = () => {
     return (dispatch => {
         dispatch({type:FETCH_CURRENT_PH});
-        fetch('http://localhost:3000/ph')
+        fetch('http://localhost:8000/api/DataPoints/Ph', {
+            headers: {'Content-Type':'application/json'},
+        })
         .then(res => res.json())
         .then((result) => {
             //successful 
@@ -46,15 +50,19 @@ export const getCurrentPH = () => {
 export const getCurrentTemperature = () => {
     return (dispatch => {
         dispatch({type:FETCH_CURRENT_TEMPERATURE});
-        fetch('http://localhost:3000/temperature')
+        fetch('http://localhost:8000/api/DataPoints/Temperature', {
+            headers: {'Content-Type':'application/json'},
+        })
         .then(res => res.json())
         .then((result) => {
             //successful 
             dispatch({type: FETCH_CURRENT_TEMPERATURE_SUCCESS, payload: result})
         }, 
         (error) => {
+            console.log(error)
             dispatch({type: FETCH_CURRENT_TEMPERATURE_FAIL, payload: error.message})
         })
+        .catch(error => dispatch({type: FETCH_CURRENT_TEMPERATURE_FAIL, payload: error}))
     })
 }
 

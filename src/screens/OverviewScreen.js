@@ -13,7 +13,7 @@ class OverviewScreen extends React.Component{
         this.props.getCurrentOxygen();
         this.props.getCurrentPH();
         this.props.getCurrentTemperature();
-        this.props.getSettings();
+        //this.props.getSettings();
     }
 
     renderData(){
@@ -54,8 +54,8 @@ class OverviewScreen extends React.Component{
     render(){
         console.log(this.props.currentOxygen)
         return(
-            <div style={{textAlign:'center', alignItems:'center', display:'flex', flexDirection:'column'}}>
-                <h1>Overview</h1>
+            <div className='contentContainer'>
+                <h1>{'Data & Details'}</h1>
                 {this.renderData()}
                 <div>
                     {this.renderSettings()}
