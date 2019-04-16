@@ -11,6 +11,9 @@ import {
     FETCH_SETTINGS,
     FETCH_SETTINGS_SUCCESS,
     FETCH_SETTINGS_FAIL,
+    LOGIN,
+    LOGIN_FAIL,
+    LOGIN_SUCCESS
 } from '../actions/types';
 
 const INITIAL_STATE = {
@@ -21,6 +24,7 @@ const INITIAL_STATE = {
     loading: true,
     error: false,
     status: '',
+    user: null
 }
 
 export default (state=INITIAL_STATE, action) => {
@@ -53,6 +57,12 @@ export default (state=INITIAL_STATE, action) => {
             return {...state, loading: false, settings: payload}
         case FETCH_SETTINGS_FAIL:
             return {...state, loading: false, error: true, status: payload}
+        case LOGIN:
+            return {...state, loading: true, error:false}
+        case LOGIN_SUCCESS:
+            return {...state, user:payload, loading:false, error:false}
+        case LOGIN_FAIL:
+            return {...state, error:payload, loading:false}
         default:
             return state;
     }

@@ -1,11 +1,12 @@
 import React from 'react';
+import Icon from './Icon';
 
 export default (props) => {
     return(
-        <div className='dataBoxContainer'>
+        <div onClick={props.onClick} className='dataBoxContainer small'>
             <p className='dataBoxLabel'>{props.label}</p>
             <div className='dataBoxHorizontal'>
-                <i className='dataBoxIcon'>{props.icon}</i>
+                <Icon color={props.color} icon={props.icon} size={50}/>
                 <p className='dataBoxValue'>{props.value}</p>
             </div>
         </div>

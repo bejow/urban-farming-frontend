@@ -5,16 +5,54 @@ a{
 }
 
 h1{
-    width: 100%
+    width: 100%;
+    color:#4A4A4A;
+    text-align: center;
+    font-size: 38px
+}
+
+body {
+    background-color: #f6f6f6
+}
+h2{
+    margin-top: 0px;
+}
+
+p{
+    margin:0px;
+    color:#4A4A4A
+}
+
+.navLogo{
+    position: absolute;
+    bottom: 40px;
+}
+
+.chart{
+    flex-basis: calc(50% - 30px);
+    margin: 10px;
+}
+
+.small{
+    flex-basis: calc(25% - 25px);
+}
+
+.medium{
+    flex-basis: calc(50% - 70px);
+}
+
+.fieldContainer{
+    width: 50%;
+    
 }
 
 .contentContainer{
-    padding: 20px;
     margin-left: 15%;
     display: flex;
     align-items: center;
     flex-wrap: wrap;
     width: 80%;
+    padding: 20px;
 }
 
 .navigationContainer{
@@ -24,27 +62,79 @@ h1{
     top:0;
     left:0;
     display:flex;
+    background-color: #246328;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     position: fixed;
-    padding:auto
+    padding:5px
 }
 
 .navlinkContainer{
     height: 33vh;
     width: 80%;
-    align-items: flex-start
+    display:flex;
+    flex-direction: column;
+    align-items: space-between;
+}
+
+.canvasjs-chart-canvas{
+    position: relative;
 }
 
 .navLink{
     display: flex;
     width: 100%;
     align-items: center;
+    justify-content: flex-start; 
+    padding-left: 10px;
+    margin-right: 10px;
 }
 
 .navLinkLabel{
-    margin-left: 10px;
+    margin: 0 0 0 10px;
+    font-size: 18px;
+    color: #bebebe;
+}
+
+.selected{
+    color: #ffffff;
+    font-weight: bold;
+    box-shadow: -4px 0px 0px 0px white
+}
+
+.horizontal{
+    display:flex;
+    align-items: center;
+    padding: 20px;
+}
+
+.dataBoxContainer{
+    box-shadow: 2px 2px 3px grey;
+    border: 1px solid grey;
+    margin: 10px;
+    transition-duration: 0.4s;
+}
+
+.dataBoxContainer:hover{
+    background-color: #EEEEEE
+
+}
+
+.dataBoxLabel{
+    margin: 5px 0 10px 5px
+}
+
+.dataBoxHorizontal{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.dataBoxValue{
+    margin: 0 0 0 15px;
+    font-size: 22px
 }
 
 .errorText{
@@ -56,3 +146,96 @@ h1{
     display: flex;
 }
 
+.leaderboardContainer{
+    width: 66%;
+}
+
+.horizontalWrapper{
+    display: flex;
+    width:100%;
+}
+
+.horizontalCompetitionWrapper{
+    display: flex;
+    align-items: flex-end;
+}
+
+.competitionBoxContainer{
+    border-radius: 20px;
+    background-color: #ffffff;
+    padding:10px;
+    width: 300px;
+    height: 33%;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.competitionHeaderText{
+    color: #4a4a4a;
+    font-size: 18px;
+    margin-bottom: 15px;
+    font-weight: bold;    
+}
+
+.competitionDaysText{
+    color: #4a4a4a;
+    font-weight: bold;
+    font-size: 24px;
+}
+.competitionDaysText::first-letter {
+    font-size: 200%;
+}
+
+.competitionDescriptionText{
+    color: #4a4a4a;
+    font-size: 16px;
+}
+
+.listItemContainer{
+    display: flex;
+    transition: 0.5s;
+    align-items: center;
+    padding: 10px;
+    justify-content: space-between;
+    background-color: #edf2a4;
+    border-radius: 15px;
+    margin: 10px;
+}
+
+.listItemContainer:hover{
+    padding:20px;
+}
+
+.leaderboardValueContainer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100px;
+}
+
+.rankText{
+    font-size: 42px;
+    margin-left: 20px;
+    color: #4a4a4a;
+    font-weight: bold;
+}
+
+.leaderboardNameContainer{
+    width: 250px;
+    margin-left: 50px;
+}
+
+.listItemText{
+    font-size: 28px;
+    color: #4a4a4a;
+    font-weight: bold;
+}
+
+.positionText{
+    font-size: 14px;
+    color: #4a4a4a;
+}
+
+.leaderboardContainer{
+    margin:auto;
+}

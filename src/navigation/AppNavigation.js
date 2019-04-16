@@ -1,28 +1,21 @@
 import React from 'react';
-import { BrowserRouter as Router, Link } from 'react-router-dom';
-import NavLink from '../components/NavLink';
+import { BrowserRouter as Router, NavLink } from 'react-router-dom';
+import CustomLink from '../components/CustomLink';
 import {ICONS} from '../constants/icons';
+import logo from '../images/logo.png';
 
 export default () => {
     return (
         <div className='navigationContainer'>
             <div className='navlinkContainer'>
-            <Link to='/'>
-                <NavLink icon={ICONS.HOME} label="Dashboard"/>
-            </Link>
-            <Link to='/data'>
-                <NavLink icon={ICONS.DIAGRAMM} label={"Data & Details"}/>
-            </Link>
-            <Link to='/leaderboard'>
-                <NavLink icon={ICONS.BADGE} label="Leaderboard"/>
-            </Link>
-            <Link to='/plan'>
-                <NavLink icon={ICONS.PLAN} label={'Plan & Steps'}/>
-            </Link>
-            <Link to='/info'>
-                <NavLink icon={ICONS.WORLD} label="Wait - what?"/>
-            </Link>
+                <CustomLink exact to='/' icon={ICONS.HOME} label="Dashboard"/>
+                <CustomLink to='/data' icon={ICONS.DIAGRAMM} label={"Data & Details"}/>
+                <CustomLink to='/leaderboard' icon={ICONS.BADGE} label="Leaderboard"/>
+                <CustomLink to='/login' icon={ICONS.BADGE} label="Login"/>
+                <CustomLink to='/plan' icon={ICONS.PLAN} label={'Plan & Steps'}/>
+                <CustomLink to='/info' icon={ICONS.WORLD} label="Wait - what?"/>
             </div>
+            <img className='navLogo' src={logo}/>
         </div>
     )
 }
