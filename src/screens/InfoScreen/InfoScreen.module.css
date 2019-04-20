@@ -1,0 +1,25 @@
+.contentGrid{
+    margin: 20px 40px 20px 40px;
+    width: 100vw;
+    height: 90vh;
+    display: grid;
+    grid-template-columns: 55% 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-column-gap: 30px;
+    grid-row-gap: 40px;
+    grid-template-areas: 
+    "article1 article2"
+    "article1 article3"
+
+}
+
+.big{
+    grid-area: article1;
+}
+
+.small1{
+    grid-area: article3;
+}
+.small2{
+    grid-area: article2;
+}

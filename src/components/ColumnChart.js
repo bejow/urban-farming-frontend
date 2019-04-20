@@ -9,7 +9,7 @@ export default class ColumnChart extends React.Component {
     }
     render(){
         return (
-            <div className="chart">
+            <div className={"chart" + " " + this.props.area}>
                 <CanvasJSChart options = {options}
                     onRef = {ref => {
                         this.chart = ref

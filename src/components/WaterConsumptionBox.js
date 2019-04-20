@@ -3,6 +3,6 @@ import MyAreaChart from './MyAreaChart';
 
 export default (props) => {
     return (
-            <MyAreaChart data={props.data}/>
+            <MyAreaChart area={props.area} data={props.data}/>
     )
 }

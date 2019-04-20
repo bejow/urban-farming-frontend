@@ -1,0 +1,17 @@
+.container{
+    display:flex;
+    justify-content: space-between;
+    width:35%;
+    margin:auto;
+    margin-top: 20px;
+}
+
+.text{
+    font-size: 22px;
+}
+
+.selected{
+    border-bottom: 3px solid black;
+    font-family: NunitoSansBold;
+    font-size: 22px;
+}

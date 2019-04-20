@@ -11,9 +11,9 @@ import {
 export default class MyAreaChart extends PureComponent {
 
   render() {
-    console.log(this.props);
     return (
-        <ResponsiveContainer height='auto' aspect={2} width={this.props.width ? this.props.width : "50%"}>
+            <div className={this.props.area}>
+      <ResponsiveContainer width='100%'>
             <AreaChart
                 data={this.props.data}
                 margin={{
@@ -25,7 +25,8 @@ export default class MyAreaChart extends PureComponent {
                 <Tooltip />
                 <Area type="monotone" dataKey="litre" stroke="#8884d8" fill="#8884d8" />
             </AreaChart>
-        </ResponsiveContainer>
+            </ResponsiveContainer>
+            </div>
     );
   }
 }

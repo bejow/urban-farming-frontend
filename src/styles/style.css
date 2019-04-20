@@ -1,31 +1,66 @@
+@font-face {
+    font-family: 'NunitoSansBold';
+    src: local('NunitoSansBold'), url(./../fonts/NunitoSans-Bold.ttf) format('truetype')
+}
+
+@font-face {
+    font-family: 'NunitoSansLight';
+    src: local('NunitoSansLight'), url(./../fonts/NunitoSans-Light.ttf) format('truetype')
+}
+
+@font-face {
+    font-family: 'NunitoSansExtraBold';
+    src: local('NunitoSansExtraBold'), url(./../fonts/NunitoSans-ExtraBold.ttf) format('truetype')
+}
+
 a{
     text-decoration: none;
     margin-top: 10px;
     margin-bottom: 10px;
 }
 
+textarea{
+    color:#4A4A4A;
+    font-family: 'NunitoSansLight';
+    font-size: 22px;
+    }
+
 h1{
     width: 100%;
     color:#4A4A4A;
     text-align: center;
-    font-size: 38px
+    font-size: 38px;
+    font-family: 'NunitoSansExtraBold'
 }
 
 body {
-    background-color: #f6f6f6
+    background-color: #f6f6f6;
 }
 h2{
+    font-family: 'NunitoSansExtraBold';
     margin-top: 0px;
 }
 
 p{
     margin:0px;
-    color:#4A4A4A
+    color:#4A4A4A;
+    font-family: 'NunitoSansLight';
 }
 
 .navLogo{
     position: absolute;
     bottom: 40px;
+    right: 40px;
+}
+
+.login{
+    bottom:50%;
+}
+
+.logout{
+    position: absolute;
+    right: 50px;
+    top: 50px;
 }
 
 .chart{
@@ -55,6 +90,32 @@ p{
     padding: 20px;
 }
 
+.contentGrid{
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 40px 50% 1fr 40px;
+    grid-template-rows: 40px 1fr 1fr 40px;
+    grid-column-gap: 30px;
+    grid-row-gap: 40px;
+    grid-template-areas: 
+    ". . . ."
+    ". article1 article2 ."
+    ". article1 article3 ."
+    ". . . ."
+}
+
+.articleBig{
+    grid-area: article1;
+}
+
+.articleSmall1{
+    grid-area: article3;
+}
+.articleSmall2{
+    grid-area: article2;
+}
+
 .navigationContainer{
     height:100vh;
     width:15%;
@@ -67,7 +128,7 @@ p{
     align-items: center;
     justify-content: center;
     position: fixed;
-    padding:5px
+    padding:5px;
 }
 
 .navlinkContainer{
@@ -109,34 +170,6 @@ p{
     padding: 20px;
 }
 
-.dataBoxContainer{
-    box-shadow: 2px 2px 3px grey;
-    border: 1px solid grey;
-    margin: 10px;
-    transition-duration: 0.4s;
-}
-
-.dataBoxContainer:hover{
-    background-color: #EEEEEE
-
-}
-
-.dataBoxLabel{
-    margin: 5px 0 10px 5px
-}
-
-.dataBoxHorizontal{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 10px;
-}
-
-.dataBoxValue{
-    margin: 0 0 0 15px;
-    font-size: 22px
-}
-
 .errorText{
     color: red;
     font-size: 18px;
@@ -144,10 +177,6 @@ p{
 
 .appContainer{
     display: flex;
-}
-
-.leaderboardContainer{
-    width: 66%;
 }
 
 .horizontalWrapper{
@@ -191,51 +220,3 @@ p{
     font-size: 16px;
 }
 
-.listItemContainer{
-    display: flex;
-    transition: 0.5s;
-    align-items: center;
-    padding: 10px;
-    justify-content: space-between;
-    background-color: #edf2a4;
-    border-radius: 15px;
-    margin: 10px;
-}
-
-.listItemContainer:hover{
-    padding:20px;
-}
-
-.leaderboardValueContainer{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100px;
-}
-
-.rankText{
-    font-size: 42px;
-    margin-left: 20px;
-    color: #4a4a4a;
-    font-weight: bold;
-}
-
-.leaderboardNameContainer{
-    width: 250px;
-    margin-left: 50px;
-}
-
-.listItemText{
-    font-size: 28px;
-    color: #4a4a4a;
-    font-weight: bold;
-}
-
-.positionText{
-    font-size: 14px;
-    color: #4a4a4a;
-}
-
-.leaderboardContainer{
-    margin:auto;
-}

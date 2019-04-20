@@ -1,5 +1,5 @@
 import React from 'react';
-import Leaderboard from '../components/Leaderboard';
+import {Leaderboard} from '../components/Leaderboard';
 import {LEADERBOARD_DATA} from '../constants/data';
 import CompetitionBox from '../components/CompetitionBox';
 

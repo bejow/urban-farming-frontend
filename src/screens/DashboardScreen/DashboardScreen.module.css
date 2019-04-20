@@ -1,0 +1,49 @@
+.contentGrid{
+    margin: 20px 40px 0px 40px;
+    width: 100vw;
+    height: 92vh;
+    display: grid;
+    grid-template-columns: 1fr 50% 1fr;
+    grid-template-rows: 20% 20% 20% 1fr 1fr;
+    grid-template-areas: 
+    "box1 img boxBig"
+    "box2 img boxBig"
+    "box3 img box4"
+    "banner banner banner" 
+    "banner banner banner";
+    row-gap: 30px;
+    column-gap: 30px;
+    justify-items: center;
+}
+
+.box1{
+    grid-area: box1;
+}
+
+.box2{
+    grid-area: box2;
+}
+
+.box3{
+    grid-area: box3;
+}
+
+.box4{
+    grid-area: box4;
+}
+
+.boxBig{
+    grid-area: boxBig;
+}
+
+.image{
+    grid-area: img;
+    height: 70%;
+    position: absolute;
+    top:0;
+}
+
+.banner{
+    margin-top:30px;
+    grid-area: banner;
+}

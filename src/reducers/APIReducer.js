@@ -13,7 +13,10 @@ import {
     FETCH_SETTINGS_FAIL,
     LOGIN,
     LOGIN_FAIL,
-    LOGIN_SUCCESS
+    LOGIN_SUCCESS,
+    LOGOUT,
+    LOGOUT_FAIL,
+    LOGOUT_SUCCESS,
 } from '../actions/types';
 
 const INITIAL_STATE = {
@@ -24,7 +27,7 @@ const INITIAL_STATE = {
     loading: true,
     error: false,
     status: '',
-    user: null
+    user: {uuid:"nicht admin"}
 }
 
 export default (state=INITIAL_STATE, action) => {
@@ -63,6 +66,12 @@ export default (state=INITIAL_STATE, action) => {
             return {...state, user:payload, loading:false, error:false}
         case LOGIN_FAIL:
             return {...state, error:payload, loading:false}
+        case LOGOUT: 
+            return {...state, loading:true}
+        case LOGOUT_SUCCESS:
+            return {...state, user:null}
+        case LOGOUT_FAIL:
+            return {...state, error: payload}
         default:
             return state;
     }

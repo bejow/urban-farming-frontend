@@ -4,6 +4,7 @@ const GET_OXYGEN_ENDPOINT = '/oxygen';
 const GET_PH_ENDPOINT = '/ph';
 const GET_SETTINGS_ENDPOINT = '/settings';
 const LOGIN_ENDPOINT = '/login';
+const LOGOUT_ENDPOINT = '/logout';
 
 export {
     API_URL,
@@ -12,4 +13,5 @@ export {
     GET_PH_ENDPOINT,
     GET_SETTINGS_ENDPOINT,
     LOGIN_ENDPOINT,
+    LOGOUT_ENDPOINT,
 }

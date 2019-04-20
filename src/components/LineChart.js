@@ -42,7 +42,7 @@ export default class LineChart extends React.Component {
 			}]
 		}
 		return (
-		<div className="chart">
+		<div className={"chart" + " " + this.props.area}>
 			<CanvasJSChart options = {options}
                 onRef = {ref => {
                     this.chart = ref
