@@ -11,6 +11,19 @@
     width: 150px;
 }
 
+.titleText{
+    font-size: 44px;
+    font-weight: 700;
+    letter-spacing: 0.21px;
+    line-height: 40px;
+}
+
+.text{
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+}
+
 .chartWrapper{
     width: 50%;
     display: flex;

@@ -10,8 +10,8 @@ export default (props) => {
     return(
         <div className={styles.energyBoxContainer + " " + area}>
             <div className={styles.textContainer}>
-                <h2>{ENERGY_PRODUCTION_TITLE}</h2>
-                <p>{ENERGY_PRODUCTION_LABEL}</p>
+                <h2 className={styles.titleText}>{ENERGY_PRODUCTION_TITLE}</h2>
+                <p className={styles.text}>{ENERGY_PRODUCTION_LABEL}</p>
             </div>
             <div className={styles.chartWrapper}>
                 <div className={styles.chart}>

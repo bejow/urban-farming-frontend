@@ -209,6 +209,43 @@ const PLAN_EXAMPLE_DATA_JUNE = [
 const ARTICLE_TITLE = "Hydroponics explained!";
 const ARTICLE_TEXT = "Hydroponics, by definition, is a method of growing plants in a water based, nutrient rich solution. Hydroponics does not use soil, instead the root system is supported using an inert medium such as perlite, rockwool, clay pellets, peat moss, or vermiculite. The basic premise behind hydroponics is to allow the plants roots to come in direct contact with the nutrient solution, while also having access to oxygen, which is essential for proper growth.\n\n I highly recommend reading through this guide and learning as much as you can about hydroponics before you start your garden. Even if you don’t plan on growing with hydroponics, you can still learn a lot about what plants need in their various stages of growth by reading about the basics of hydroponics.\n\n AdvantagesGrowing with hydroponics comes with many advantages, the biggest of which is a greatly increased rate of growth in your plants. With the proper setup, your plants will mature up to 25% faster and produce up to 30% more than the same plants grown in soil.\n\n Your plants will grow bigger and faster because they will not have to work as hard to obtain nutrients. Even a small root system will provide the plant exactly what it needs, so the plant will focus more on growing upstairs instead of expanding the root system downstairs.\n\n All of this is possible through careful control of your nutrient solution and pH levels. A hydroponic system will also use less water than soil based plants because the system is enclosed, which results in less evaporation. Believe it or not, hydroponics is better for the environment because it reduces waste and pollution from soil runoff.\n\n Disadvantages Despite the fact that a hydroponics system has so many advantages, there are actually a few disadvantages as well. The biggest factor for most people is that a quality hydroponics system of any size will cost more than its soil counterpart. Then again, dirt isn’t exactly expensive and you get what you pay for.\n\n A large scale hydroponics system can take a lot of time to setup if you aren’t the most experienced grower. Plus, managing your hydroponics system will take a lot of time as well. You will have to monitor and balance your pH and nutrient levels on a daily basis.\n\n The greatest risk with a hydroponics system is that something like a pump failure can kill off your plants within hours depending on the size of your system. They can die quickly because the growing medium can’t store water like soil can, so the plants are dependent on a fresh supply of water.\n\n Types of Hydroponic SystemsThe cool thing about hydroponics is that there are many different types of hydroponics systems available. Some of the best hydroponic systems on the market combine different types of hydroponics into one hybrid hydroponic system. Hydroponics is unique in that there are multiple techniques you can use to get the nutrient solution to your plants."
 
+const PLANT_LIST_DATA = [
+  {
+    id: "42",
+    name: "Belgian Endive",
+    description: "Variety of Chicory"
+  },
+  {
+    id: "1337",
+    name: "Summercrisp",
+    description: "Batavian or French crisp"
+  },
+  {
+    id: "666",
+    name: "Butterhead",
+    description: "Boston or Bibb lettuce"
+  },
+  {
+    id: "404",
+    name: "Lollo Rosso",
+    description: "Hydroponics All of this is pos"
+  },
+  {
+    id: "200",
+    name: "Celtuce",
+    description: "Stem lettuce / Chinese lettuce"
+  },
+]
+
+const PLANT_TITLE = "Belgian Endive";
+const PLANT_SUBTITLE = "Variety of Chicory";
+const PLANT_WATER_INFO = "Can save up to 120 liters water";
+const PLANT_SUN_INFO = "6–8 hours per day";
+const PLANT_SEASON_INFO = "Season in supermarket:\nJune – September";
+const PLANT_TIME_INFO = "6 days average to grow";
+const PLANT_NAME_INFO = "Alternate names: Chioggia, red chicory, red leaf chicory, red Italian chicory";
+const PLANT_CHARACTERISTIC_INFO = 'Characteristics: Pronounced "rah-dick-ee-yo," you can find this deep-red-purple §vegetable sold either as a compact round head, as pictured above, or shaped like its relative, endive. The bright coloring makes it stand out. When cooked, the red-purple hue turns brown and what was once bitter becomes sweet.';
+
 
 export {
     WATER_CONSUMPTION_DATA,
@@ -219,4 +256,13 @@ export {
     PLAN_EXAMPLE_DATA_MAY,
     ARTICLE_TEXT,
     ARTICLE_TITLE,
+    PLANT_LIST_DATA,
+    PLANT_CHARACTERISTIC_INFO,
+    PLANT_NAME_INFO,
+    PLANT_SEASON_INFO,
+    PLANT_SUBTITLE,
+    PLANT_SUN_INFO,
+    PLANT_TIME_INFO,
+    PLANT_WATER_INFO,
+    PLANT_TITLE
 }

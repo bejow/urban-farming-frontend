@@ -7,16 +7,20 @@ export default class InfoScreen extends React.Component{
     constructor(props){
         super(props);
         this.state = {
-            redirectToArticle: false
+            redirectToArticle: false,
+            redirectToPlantInfo: false
         }
     }
 
     onArticleClick = (articleId) => this.setState( {redirectToArticle:articleId})
-
+    onPlantInfoClick = () => this.setState({ redirectToPlantInfo: true})
     render(){
 
         if (this.state.redirectToArticle){
             return <Redirect to={`/info/article/${this.state.redirectToArticle}`}/>
+        }
+        else if (this.state.redirectToPlantInfo){
+            return <Redirect to='/info/plants'/>
         }
 
         return(
@@ -35,6 +39,7 @@ export default class InfoScreen extends React.Component{
                     />
                     <InfoBox 
                         area={styles.small2} 
+                        onClick={this.onPlantInfoClick}
                         title="Check your greens here!"
                         text="Here you can find information about the lettuce grown in your system, but you can also check other lettuces and potential things to plant!"
                     />

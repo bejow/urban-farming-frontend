@@ -14,6 +14,9 @@ import { logout } from './actions/AuthActions';
 import SettingsScreen from './screens/SettingsScreen';
 import ServiceScreen from './screens/ServiceScreen';
 import { ArticleScreen } from './screens/ArticleScreen';
+import { PlantInfoScreen } from './screens/PlantInfoScreen';
+import { PlantDetailScreen } from './screens/PlantDetailScreen';
+
 
 class Root extends Component {
     render(){
@@ -33,6 +36,8 @@ class Root extends Component {
                     <PrivateRoute user={user} path='/settings' component={SettingsScreen}/>
                     <PrivateRoute user={user} path='/service' component={ServiceScreen}/>
                     <PrivateRoute user={user} path="/info/article/:id" component={ArticleScreen} />
+                    <PrivateRoute user={user} path="/info/plants/:id" component={PlantDetailScreen} />
+                    <PrivateRoute user={user} exact path="/info/plants" component={PlantInfoScreen} />
                     <Route path='/login' component={LoginScreen}/>
                 </div>
             </BrowserRouter>
