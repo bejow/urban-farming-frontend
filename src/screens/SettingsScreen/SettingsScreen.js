@@ -7,9 +7,9 @@ import {
     CircularProgress,
     CircularThumb,
 } from 'react-circular-input'
-import {getCurrentOxygen, getCurrentTemperature, getCurrentPH, getSettings, onChangeSettings} from '../actions'
-import {NumberInput} from '../components/NumberInput';
-
+import {getCurrentOxygen, getCurrentTemperature, getCurrentPH, getSettings, onChangeSettings} from '../../actions'
+import {NumberInput} from '../../components/NumberInput';
+import styles from './SettingsScreen.module.css';
 
 
 
@@ -56,37 +56,8 @@ class OverviewScreen extends React.Component{
         }
         else if (currentOxygen && currentPH && currentTemperature ){
             return (
-                <div>
-                    <p>Oxygen:</p>
-                    <p>{currentOxygen[0].value}</p>
-                    <p>PH:</p>
-                    <p>{currentPH[0].value}</p>
-                    <p>Temperature:</p>
-                    <p>{currentTemperature[0].value}°C</p>
-                    <NumberInput 
-                        name="light_time"
-                        label="Light Time"
-                        onChange={onChangeSettings} 
-                        value={localSettings.light_time}
-                    />
-                    <NumberInput 
-                        name="no_light_time"
-                        label="No Light Time"
-                        onChange={onChangeSettings} 
-                        value={localSettings.no_light_time}
-                    />
-                    <NumberInput 
-                        name="water_time"
-                        label="Water Time"
-                        onChange={onChangeSettings} 
-                        value={localSettings.water_time}
-                    />
-                    <NumberInput 
-                        name="no_water_time"
-                        label="No Water Time"
-                        onChange={onChangeSettings} 
-                        value={localSettings.no_water_time}
-                    />
+                <div className={styles.container}>
+                    
                 </div>    
             )
         }
