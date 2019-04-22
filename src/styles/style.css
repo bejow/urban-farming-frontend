@@ -27,6 +27,12 @@ textarea{
     font-size: 22px;
     }
 
+input{
+    color:#4A4A4A;
+    font-family: 'NunitoSansLight';
+    font-size: 22px;
+    }
+
 h1{
     width: 100%;
     color:#4A4A4A;
@@ -80,7 +86,7 @@ p{
 
 .fieldContainer{
     text-align: center;
-    
+    display:flex;
 }
 
 .contentContainer{

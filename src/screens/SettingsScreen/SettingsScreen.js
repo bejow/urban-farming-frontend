@@ -10,6 +10,7 @@ import {
 import {getCurrentOxygen, getCurrentTemperature, getCurrentPH, getSettings, onChangeSettings} from '../../actions'
 import {NumberInput} from '../../components/NumberInput';
 import styles from './SettingsScreen.module.css';
+import SETTINGS_ICON from '../../images/settings_icon.png'
 
 
 
@@ -21,7 +22,8 @@ class OverviewScreen extends React.Component{
             lightTime: props.settings.light_time,
             noLightTime: props.settings.no_light_time,
             waterTime: props.settings.water_time,
-            noWaterTime: props.settings.no_water_time
+            noWaterTime: props.settings.no_water_time,
+            selectedSetting: ""
         }
     }
 
@@ -70,14 +72,40 @@ class OverviewScreen extends React.Component{
         }
     }
 
+    renderOptions(){
+        return(
+            <div className={styles.optionContainer}>
+                <div 
+                    onClick={ () => this.setState({selectedSetting: "night"})} 
+                    className={`${styles.option} ${this.state.selectedSetting=="night" ? styles.active : null}`}>
+                    Night mode - do not disturbe
+                </div>
+                <div    
+                    onClick={ () => this.setState({selectedSetting: "leafy"})} 
+                    className={`${styles.option} ${this.state.selectedSetting=="leafy" ? styles.active : null}`}>
+                    Ideal care for leafy greens
+                </div>
+                <div                    
+                    onClick={ () => this.setState({selectedSetting: "herb"})} 
+                    className={`${styles.option} ${this.state.selectedSetting=="herb" ? styles.active : null}`}>
+                    Ideal car for herbs
+                </div>
+            </div>
+            )
+    }
+
     render(){
         console.log(this.props)
         return(
             <div className='contentContainer'>
-                <h1>{'Settings'}</h1>
-                {this.renderData()}
-                <div>
-                    {this.renderSettings()}
+                <div className={styles.container}>
+                    <h1>Default setting</h1>
+                    <img className={styles.icon} src={SETTINGS_ICON}/>
+                    {this.renderOptions()}
+                    {this.renderData()}
+                    <div>
+                        {this.renderSettings()}
+                    </div>
                 </div>
             </div>
         )

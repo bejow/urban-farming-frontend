@@ -36,11 +36,11 @@ export class LoginForm extends Component {
     const {handleSubmit, onSubmit, title} = this.props;
     return (
       <form className={styles.container} onSubmit={handleSubmit(props => onSubmit(props))}>
-        <h3>{title}</h3>
+        <h1 className={styles.title}>{title}</h1>
         <Field name="username" type="text" component={this.renderField}/>
         <Field name="password" type="password" component={this.renderField}/>
         {/*_.map(FIELDS, this.renderField.bind(this))*/}
-        <button type="submit" className="btn btn.primary">Submit</button>
+        <button type="submit" className={styles.button}>Submit</button>
       </form>
     )
   }
