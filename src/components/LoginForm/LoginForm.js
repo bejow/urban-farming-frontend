@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import {reduxForm, Field } from  'redux-form';
 import _ from 'lodash';
+import styles from './LoginForm.module.css'
 
 const FIELDS = {
     username: {
@@ -15,7 +16,6 @@ const FIELDS = {
 
 export class LoginForm extends Component {
 
-
   renderField = ({
       input,
       label,
@@ -24,7 +24,7 @@ export class LoginForm extends Component {
   }) => (
           <div className={`fieldContainer ${touched && error ? 'has-danger' : ''}`}>
                 <label>{label}</label>
-                <input {...input} type={type} className="form-control"/>
+                <input {...input} type={type} className={`${styles.input} form-control`}/>
                 <div className="text-help">
                     {touched ? error : ''}
                 </div>
@@ -35,10 +35,10 @@ export class LoginForm extends Component {
   render() {
     const {handleSubmit, onSubmit, title} = this.props;
     return (
-      <form className="loginForm" onSubmit={handleSubmit(props => onSubmit(props))}>
+      <form className={styles.container} onSubmit={handleSubmit(props => onSubmit(props))}>
         <h3>{title}</h3>
-        <Field name="username" type="text" component={this.renderField} label="Username"/>
-        <Field name="password" type="password" component={this.renderField} label="Password"/>
+        <Field name="username" type="text" component={this.renderField}/>
+        <Field name="password" type="password" component={this.renderField}/>
         {/*_.map(FIELDS, this.renderField.bind(this))*/}
         <button type="submit" className="btn btn.primary">Submit</button>
       </form>
