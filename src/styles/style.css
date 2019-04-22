@@ -1,13 +1,224 @@
-link{
+@font-face {
+    font-family: 'NunitoSansBold';
+    src: local('NunitoSansBold'), url(./../fonts/NunitoSans-Bold.ttf) format('truetype')
+}
+
+@font-face {
+    font-family: 'NunitoSansLight';
+    src: local('NunitoSansLight'), url(./../fonts/NunitoSans-Light.ttf) format('truetype')
+}
+
+@font-face {
+    font-family: 'NunitoSansExtraBold';
+    src: local('NunitoSansExtraBold'), url(./../fonts/NunitoSans-ExtraBold.ttf) format('truetype')
+}
+
+@import "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css";
+
+a{
     text-decoration: none;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+textarea{
+    color:#4A4A4A;
+    font-family: 'NunitoSansLight';
+    font-size: 22px;
+    }
+
+h1{
+    width: 100%;
+    color:#4A4A4A;
+    text-align: center;
+    font-size: 38px;
+    font-family: 'NunitoSansExtraBold'
+}
+
+body {
+    background-color: #f6f6f6;
+}
+h2{
+    font-family: 'NunitoSansExtraBold';
+    margin-top: 0px;
+}
+
+p{
+    margin:0px;
+    color:#4A4A4A;
+    font-family: 'NunitoSansLight';
+}
+
+.navLogo{
+    position: absolute;
+    bottom: 40px;
+    right: 40px;
+}
+
+.login{
+    bottom:50%;
+}
+
+.logout{
+    position: absolute;
+    right: 50px;
+    top: 50px;
+}
+
+.chart{
+    flex-basis: calc(50% - 30px);
+    margin: 10px;
+}
+
+.small{
+    flex-basis: calc(25% - 25px);
+}
+
+.medium{
+    flex-basis: calc(50% - 70px);
+}
+
+.fieldContainer{
+    width: 50%;
+    
+}
+
+.contentContainer{
+    margin-left: 15%;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 80%;
+    padding: 20px;
+}
+
+.contentGrid{
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 40px 50% 1fr 40px;
+    grid-template-rows: 40px 1fr 1fr 40px;
+    grid-column-gap: 30px;
+    grid-row-gap: 40px;
+    grid-template-areas: 
+    ". . . ."
+    ". article1 article2 ."
+    ". article1 article3 ."
+    ". . . ."
+}
+
+.articleBig{
+    grid-area: article1;
+}
+
+.articleSmall1{
+    grid-area: article3;
+}
+.articleSmall2{
+    grid-area: article2;
 }
 
 .navigationContainer{
+    height:100vh;
+    width:15%;
+    z-index: 1;
+    top:0;
+    left:0;
     display:flex;
-    justify-content: space-around;
+    background-color: #246328;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    padding:5px;
+}
+
+.navlinkContainer{
+    height: 33vh;
+    width: 80%;
+    display:flex;
+    flex-direction: column;
+    align-items: space-between;
+}
+
+.canvasjs-chart-canvas{
+    position: relative;
+}
+
+.navLink{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: flex-start; 
+    padding-left: 10px;
+    margin-right: 10px;
+}
+
+.navLinkLabel{
+    margin: 0 0 0 10px;
+    font-size: 18px;
+    color: #bebebe;
+}
+
+.selected{
+    color: #ffffff;
+    font-weight: bold;
+    box-shadow: -4px 0px 0px 0px white
+}
+
+.horizontal{
+    display:flex;
+    align-items: center;
+    padding: 20px;
 }
 
 .errorText{
     color: red;
     font-size: 18px;
 }
+
+.appContainer{
+    display: flex;
+}
+
+.horizontalWrapper{
+    display: flex;
+    width:100%;
+}
+
+.horizontalCompetitionWrapper{
+    display: flex;
+    align-items: flex-end;
+}
+
+.competitionBoxContainer{
+    border-radius: 20px;
+    background-color: #ffffff;
+    padding:10px;
+    width: 300px;
+    height: 33%;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.competitionHeaderText{
+    color: #4a4a4a;
+    font-size: 18px;
+    margin-bottom: 15px;
+    font-weight: bold;    
+}
+
+.competitionDaysText{
+    color: #4a4a4a;
+    font-weight: bold;
+    font-size: 24px;
+}
+.competitionDaysText::first-letter {
+    font-size: 200%;
+}
+
+.competitionDescriptionText{
+    color: #4a4a4a;
+    font-size: 16px;
+}
+

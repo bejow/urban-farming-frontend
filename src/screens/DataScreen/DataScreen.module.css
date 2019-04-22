@@ -1,0 +1,28 @@
+.contentGrid{
+    display: grid;
+    grid-template-areas: 
+    "box1 box2 box3"
+    "longBox1 longBox1 longBox1"
+    "longBox2 longBox2 longBox2";
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 320px 320px 320px;
+    margin: auto;
+    grid-column-gap: 40px;
+    grid-row-gap: 40px;
+}
+
+.box1{
+    grid-area: box1;
+}
+.box2{
+    grid-area: box2;
+}
+.box3{
+    grid-area: box3;
+}
+.longBox1{
+    grid-area: longBox1;
+}
+.longBox2{
+    grid-area: longBox2;
+}

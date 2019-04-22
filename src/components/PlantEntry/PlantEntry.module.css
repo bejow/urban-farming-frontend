@@ -1,0 +1,29 @@
+.container{
+    display: flex;
+    justify-content: space-between;
+    width:100%;
+    align-items: center;
+    margin: 10px 0 10px 0;
+}
+
+.image{
+    height: 90%;
+}
+
+.descriptionContainer{
+    width:80%;
+    margin-left: 40px;
+}
+
+.nameText{
+    text-align: left;
+    font-size: 60px;
+    font-weight: 700;
+    letter-spacing: -0.56px;
+    margin: 0;
+}
+
+.descriptionText{
+    font-size: 22px;
+    font-weight: 400;
+}

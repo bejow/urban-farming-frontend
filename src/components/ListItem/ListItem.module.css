@@ -1,0 +1,62 @@
+.listItemContainer{
+    display: flex;
+    transition: 0.5s;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #edf2a4;
+    border-radius: 15px;
+    margin: 10px;
+    padding: 0px 20px 0 20px
+}
+
+.listItemContainer:hover{
+    padding:10px 0 10px 0;
+}
+
+.leaderboardValueContainer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100px;
+}
+
+.rankText{
+    font-size: 73px;
+    color: #4a4a4a;
+    font-weight: bold;
+    margin:0;
+    width: 80px;
+    text-align: center;
+}
+
+.leaderboardNameContainer{
+    width: 250px;
+    margin-left: 50px;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.listItemText{
+    font-size: 32px;
+    font-weight: 700;
+    color: #4a4a4a;
+    font-family: NunitoSansBold;
+}
+
+.positionText{
+    font-size: 14px;
+    color: #4a4a4a;
+    font-size: 16px;
+
+font-weight: 400;
+}
+
+.leaderboardContainer{
+    margin:auto;
+}
+
+.horizontalWrapper{
+    display: flex;
+    width:100%;
+}

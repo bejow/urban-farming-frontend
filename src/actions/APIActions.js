@@ -13,10 +13,20 @@ import {
     FETCH_SETTINGS_FAIL
 } from './types';
 
+import { 
+    API_URL,
+    GET_TEMPERATURE_ENDPOINT, 
+    GET_OXYGEN_ENDPOINT,
+    GET_PH_ENDPOINT, 
+    GET_SETTINGS_ENDPOINT 
+} from '../constants/api';
+
 export const getCurrentOxygen = () => {
     return (dispatch => {
         dispatch({type:FETCH_CURRENT_OXYGEN});
-        fetch('http://localhost:3000/oxygen')
+        fetch(API_URL + GET_OXYGEN_ENDPOINT, {
+            headers: {'Content-Type':'application/json'},
+        })
         .then(res => res.json())
         .then((result) => {
             //successful 
@@ -31,7 +41,9 @@ export const getCurrentOxygen = () => {
 export const getCurrentPH = () => {
     return (dispatch => {
         dispatch({type:FETCH_CURRENT_PH});
-        fetch('http://localhost:3000/ph')
+        fetch(API_URL + GET_PH_ENDPOINT, {
+            headers: {'Content-Type':'application/json'},
+        })
         .then(res => res.json())
         .then((result) => {
             //successful 
@@ -46,22 +58,26 @@ export const getCurrentPH = () => {
 export const getCurrentTemperature = () => {
     return (dispatch => {
         dispatch({type:FETCH_CURRENT_TEMPERATURE});
-        fetch('http://localhost:3000/temperature')
+        fetch(API_URL + GET_TEMPERATURE_ENDPOINT, {
+            headers: {'Content-Type':'application/json'},
+        })
         .then(res => res.json())
         .then((result) => {
             //successful 
             dispatch({type: FETCH_CURRENT_TEMPERATURE_SUCCESS, payload: result})
         }, 
         (error) => {
+            console.log(error)
             dispatch({type: FETCH_CURRENT_TEMPERATURE_FAIL, payload: error.message})
         })
+        .catch(error => dispatch({type: FETCH_CURRENT_TEMPERATURE_FAIL, payload: error}))
     })
 }
 
 export const getSettings = () => {
     return (dispatch => {
         dispatch({type:FETCH_SETTINGS});
-        fetch('http://localhost:3000/settings')
+        fetch(API_URL + GET_SETTINGS_ENDPOINT)
         .then(res => res.json())
         .then((result) => {
             dispatch({type:FETCH_SETTINGS_SUCCESS, payload: result})

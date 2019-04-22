@@ -1,0 +1,25 @@
+.container{
+    border-radius: 15px;
+    padding: 15px;
+    position: relative;
+}
+
+.text{
+    font-size: 16px;
+    font-family: NunitoSansBold;
+}
+
+.list{
+    padding-left: 10px;
+}
+
+.title{
+    text-align: left;
+    line-height: 100%
+}
+
+.iconStyle{
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+}   

@@ -1,0 +1,36 @@
+.dataBoxContainer{
+    border-radius: 10px;
+    transition-duration: 0.4s;
+    display: flex;
+    flex-direction: column;
+    padding:10px;
+    width:255px;
+    height:120px;
+}
+
+.dataBoxContainer:hover{
+    background-color: #EEEEEE
+}
+
+.dataBoxLabel{
+    margin: 0 10px 0 15px;
+    font-family: NunitoSansBold;
+}
+
+.dataBoxHorizontal{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    flex-grow: 1;
+}
+
+.dataBoxValue{
+    margin: 0 0 0 15px;
+    font-family: NunitoSansExtraBold;
+    font-size: 48px
+}
+
+.image{
+    height:50px;
+}
