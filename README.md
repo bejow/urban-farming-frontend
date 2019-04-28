@@ -1,4 +1,14 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app)
+
+## How to run
+Prequisit: run the json fake backend ("https://github.com/bejow/json_fake_backend")
+
+npm run json:local 
+
+afterwards start the frontend dev server
+
+npm start 
+(you may have to confirm that the server runs on a different port since the backend server blocks port 3000)
 
 ## Available Scripts
 
