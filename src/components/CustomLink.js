@@ -9,7 +9,7 @@ export default (props) => {
         //     <p className='navLinkLabel'>{props.label}</p>
         // </div>
         <NavLink to={props.to} className="navLink" activeClassName="selected" exact={props.exact ? true : false}>
-            <Icon icon={props.icon} color="#ffffff"/>
+            {/* <Icon icon={props.icon} color="#ffffff"/> */}
             <p className='navLinkLabel'>{props.label}</p>
         </NavLink>
     )

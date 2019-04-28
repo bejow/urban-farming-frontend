@@ -6,9 +6,9 @@ import SALAD_WALL_ICON from '../../images/salad_wall.png';
 import ARROW_ICON from '../../images/arrow_icon.png';
 
 export default (props) => {
-    const {area} = props;
+    const {area, onClick} = props;
     return(
-        <div className={styles.energyBoxContainer + " " + area}>
+        <div onClick={onClick} className={styles.energyBoxContainer + " " + area}>
             <div className={styles.textContainer}>
                 <h2 className={styles.titleText}>{ENERGY_PRODUCTION_TITLE}</h2>
                 <p className={styles.text}>{ENERGY_PRODUCTION_LABEL}</p>

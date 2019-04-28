@@ -7,7 +7,7 @@ export default function InfoBox(props) {
     console.log(props)
     return (
         <InfoBoxFrame onClick={onClick} area={area} image={image}>
-                <h1>{title}</h1>
+                <h1 className={styles.title}>{title}</h1>
                 { text ? <p>{text}</p> : null}
         </InfoBoxFrame>
     )

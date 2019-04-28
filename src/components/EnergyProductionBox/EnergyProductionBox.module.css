@@ -5,6 +5,12 @@
     width: calc(100% - 30px);
     background-color: #FFFFFF;
     position: relative;
+    transition: 0.2s;
+    cursor: pointer;
+}
+
+.energyBoxContainer:hover{
+    background-color: #DDDDDD
 }
 
 .chart{

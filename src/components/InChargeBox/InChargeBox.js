@@ -3,10 +3,10 @@ import styles from './InChargeBox.module.css';
 import ARROW_ICON from '../../images/arrow_icon.png';
 
 export default function InChargeBox(props) {
-    const {area, backgroundColor, title, text, subTitle, listItems} = props
+    const {area, backgroundColor, title, text, subTitle, listItems, onClick} = props
     console.log(props)
     return (
-        <div style={{backgroundColor}} className={styles.container + " " + area}>
+        <div onClick={onClick} style={{backgroundColor}} className={styles.container + " " + area}>
                 <p className={styles.text}>{subTitle}</p>
                 <h1 className={styles.title}>{title}</h1>
                 { text ? <p className={styles.text}>{text}</p> : null}

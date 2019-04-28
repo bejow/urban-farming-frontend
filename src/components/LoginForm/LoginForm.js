@@ -20,14 +20,14 @@ export class LoginForm extends Component {
       input,
       label,
       type,
-      meta: {touched, error, warning }
+      meta: {touched, error, warning },
+      placeholder
   }) => (
-          <div className={`fieldContainer ${touched && error ? 'has-danger' : ''}`}>
-                <label>{label}</label>
-                <input {...input} type={type} className={`${styles.input} form-control`}/>
-                <div className="text-help">
+          <div className={`${styles.fieldContainer} ${touched && error ? 'has-danger' : ''}`}>
+                <input {...input} type={type} placeholder={label} className={`${styles.input} form-control`}/>
+                <p className="errorText">
                     {touched ? error : ''}
-                </div>
+                </p>
           </div>
     )
   
@@ -36,11 +36,11 @@ export class LoginForm extends Component {
     const {handleSubmit, onSubmit, title} = this.props;
     return (
       <form className={styles.container} onSubmit={handleSubmit(props => onSubmit(props))}>
-        <h3>{title}</h3>
-        <Field name="username" type="text" component={this.renderField}/>
-        <Field name="password" type="password" component={this.renderField}/>
+        <h1 className={styles.title}>{title}</h1>
+        <Field name="username" type="text" component={this.renderField} label="Username"/>
+        <Field name="password" type="password" component={this.renderField} label="Password"/>
         {/*_.map(FIELDS, this.renderField.bind(this))*/}
-        <button type="submit" className="btn btn.primary">Submit</button>
+        <button type="submit" className={styles.button}>Submit</button>
       </form>
     )
   }

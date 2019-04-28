@@ -6,7 +6,7 @@ import {DataScreen} from './screens/DataScreen'
 import {InfoScreen} from './screens/InfoScreen';
 import {DashboardScreen} from './screens/DashboardScreen';
 import PlanScreen from './screens/PlanScreen';
-import LeaderboardScreen from './screens/LeaderboardScreen';
+import {LeaderboardScreen} from './screens/LeaderboardScreen';
 import {LoginScreen}  from './screens/LoginScreen';
 import PrivateRoute from './navigation/PrivateRoute';
 import { connect } from 'react-redux';
@@ -24,9 +24,9 @@ class Root extends Component {
         return(
             <BrowserRouter>
                 <div className="appContainer">
-                <div className="dataBoxContainer logout" onClick={this.props.logout}>
+                {/* <div className="dataBoxContainer logout" onClick={this.props.logout}>
                     Logout
-                </div>
+                </div> */}
                 <AppNavigation user={user}/>
                     <PrivateRoute user={user} exact path='/' component={DashboardScreen}/>
                     <PrivateRoute user={user} exact path='/info' component={InfoScreen}/>

@@ -19,6 +19,9 @@ class OverviewScreen extends React.Component{
         super(props);
     }
 
+    onEnergyProductionClick = () => this.props.history.push('/leaderboard');
+    onPlanInfoClick = () => this.props.history.push('/plan');
+
     componentDidMount(){
         this.props.getCurrentOxygen();
         this.props.getCurrentPH();
@@ -83,6 +86,7 @@ class OverviewScreen extends React.Component{
                         area={styles.box4}
                     />
                     <InChargeBox
+                        onClick= {this.onPlanInfoClick}
                         backgroundColor="#edf2a4"
                         area={styles.boxBig}
                         subTitle="Today, in charge of us are"
@@ -91,7 +95,7 @@ class OverviewScreen extends React.Component{
                         listItems={["Check if the pH is okay", "Refill the fertilizer", "Check the nursery"]}
                     />
                     {this.renderImage()}
-                    <EnergyProductionBox area={styles.banner} value={42} />
+                    <EnergyProductionBox onClick={this.onEnergyProductionClick} area={styles.banner} value={42} />
                 </div>    
             )
         }

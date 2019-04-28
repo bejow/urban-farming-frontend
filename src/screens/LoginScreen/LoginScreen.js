@@ -5,6 +5,7 @@ import {Redirect} from 'react-router-dom';
 import styles from './LoginScreen.module.css';
 import {LoginForm} from '../../components/LoginForm';
 import {login} from '../../actions/AuthActions';
+import background_image from '../../images/background_login.png';
 
 class LoginScreen extends Component {
     constructor(props){
@@ -19,7 +20,8 @@ class LoginScreen extends Component {
         else {
         return(
             <div className="contentContainer">
-                <h1 className={styles.titel}>Welcome to your rowa - let's get started!</h1>
+                <img src={background_image} className={styles.background}/>
+                <h1 className={styles.title}>Welcome to your rowa -<br/> let's get started!</h1>
                 <div className={styles.container}>
                     <LoginForm title="Login!" onSubmit={(values) => login(values.username, values.password)}/>
                 </div>
