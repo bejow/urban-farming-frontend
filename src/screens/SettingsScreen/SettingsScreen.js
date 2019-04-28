@@ -68,22 +68,11 @@ class OverviewScreen extends React.Component{
         })
     }
     
-      onFocusChange(focusStatue) {
-        // do something
-      }
-
     componentDidMount(){
         this.props.getCurrentOxygen();
         this.props.getCurrentPH();
         this.props.getCurrentTemperature();
         this.props.getSettings();
-    }
-
-    onChange = (event) => {
-        console.log(event)
-        this.setState({
-            [event.target.name]: event.target.value
-        })
     }
 
     renderWaterIntervalPicker(){
@@ -208,9 +197,9 @@ class OverviewScreen extends React.Component{
                         <p className={styles.text}>{WATER_TIP}</p>
                         {this.renderWaterIntervalPicker()}
                     </div>
-                    {this.renderData()}
+                    {/* {this.renderData()} */}
                     <div>
-                        {this.renderSettings()}
+                        {/* {this.renderSettings()} */}
                     </div>
                 </div>
             </div>

@@ -4,3 +4,7 @@
     width:60%;
     margin: auto;
 }
+
+.image{
+    cursor: pointer;
+}

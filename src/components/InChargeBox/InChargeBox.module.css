@@ -2,6 +2,7 @@
     border-radius: 15px;
     padding: 15px;
     position: relative;
+    cursor: pointer;
 }
 
 .text{

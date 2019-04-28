@@ -28,16 +28,16 @@ export default class LineChart extends React.Component {
 				type: "line",
 				toolTipContent: "Week {x}: {y}%",
 				dataPoints: [
-					{ x: new Date(2017, 0, 1), y: 58 },
-					{ x: new Date(2017, 0, 2), y: 61 },
-					{ x: new Date(2017, 0, 3), y: 63 },
-					{ x: new Date(2017, 0, 4), y: 62 },
-					{ x: new Date(2017, 0, 5), y: 62 },
-					{ x: new Date(2017, 0, 6), y: 60},
-					{ x: new Date(2017, 0, 7), y: 59 },
-					{ x: new Date(2017, 0, 8), y: 55 },
-					{ x: new Date(2017, 0, 9), y: 52},
-					{ x: new Date(2017, 0, 10), y: 51 },
+					{ x: new Date(2019, 3, 1), y: 58 },
+					{ x: new Date(2019, 3, 2), y: 61 },
+					{ x: new Date(2019, 3, 3), y: 63 },
+					{ x: new Date(2019, 3, 4), y: 62 },
+					{ x: new Date(2019, 3, 5), y: 62 },
+					{ x: new Date(2019, 3, 6), y: 60},
+					{ x: new Date(2019, 3, 7), y: 59 },
+					{ x: new Date(2019, 3, 8), y: 55 },
+					{ x: new Date(2019, 3, 9), y: 52},
+					{ x: new Date(2019, 3, 10), y: 51 },
 				]
 			}]
 		}

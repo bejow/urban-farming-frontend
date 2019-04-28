@@ -24,9 +24,9 @@ class Root extends Component {
         return(
             <BrowserRouter>
                 <div className="appContainer">
-                <div className="dataBoxContainer logout" onClick={this.props.logout}>
+                {/* <div className="dataBoxContainer logout" onClick={this.props.logout}>
                     Logout
-                </div>
+                </div> */}
                 <AppNavigation user={user}/>
                     <PrivateRoute user={user} exact path='/' component={DashboardScreen}/>
                     <PrivateRoute user={user} exact path='/info' component={InfoScreen}/>

@@ -11,6 +11,7 @@
 }
 
 .option{
+    cursor: pointer;
     flex-basis: calc( 30% - 30px);
     border: 1px solid grey;
     border-radius: 20px; 
@@ -41,7 +42,7 @@
 .text{
     white-space:pre-wrap;
     font-size: 16px;
-    color: #d2d2d2;
+    color: grey;
     margin-bottom: 40px;
 }
 

@@ -20,6 +20,9 @@ class DataScreen extends React.Component{
         super(props);
     }
 
+    onEnergyProductionClick = (plantId) => this.props.history.push('/leaderboard');
+
+
     componentDidMount(){
         this.props.getCurrentOxygen();
         this.props.getCurrentPH();
@@ -48,7 +51,7 @@ class DataScreen extends React.Component{
                     <div className={styles.contentGrid}>
                         <ColumnChart area={styles.box3}/>
                         <LineChart area={styles.box1}/>
-                        <EnergyProductionBox area={styles.longBox2} value={42} />
+                        <EnergyProductionBox area={styles.longBox2} value={42} onClick={this.onEnergyProductionClick} />
                         <WaterConsumptionBox area={styles.longBox1} data={WATER_CONSUMPTION_DATA} width="45%"/>
                     </div>
                 </div>

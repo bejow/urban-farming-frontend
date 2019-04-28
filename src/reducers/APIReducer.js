@@ -27,7 +27,7 @@ const INITIAL_STATE = {
     loading: true,
     error: false,
     status: '',
-    user: {uuid: "admin fuck yeahj"},
+    user: null,
 }
 
 export default (state=INITIAL_STATE, action) => {

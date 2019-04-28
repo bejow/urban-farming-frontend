@@ -8,3 +8,10 @@
 .timePickerContainer{
     width: 300px;
 }
+
+.icon{
+    height: 40px;
+    cursor: pointer;
+    width: 40px;
+    margin-left: 20px;
+}
