@@ -6,7 +6,7 @@ import {DataScreen} from './screens/DataScreen'
 import {InfoScreen} from './screens/InfoScreen';
 import {DashboardScreen} from './screens/DashboardScreen';
 import PlanScreen from './screens/PlanScreen';
-import LeaderboardScreen from './screens/LeaderboardScreen';
+import {LeaderboardScreen} from './screens/LeaderboardScreen';
 import {LoginScreen}  from './screens/LoginScreen';
 import PrivateRoute from './navigation/PrivateRoute';
 import { connect } from 'react-redux';

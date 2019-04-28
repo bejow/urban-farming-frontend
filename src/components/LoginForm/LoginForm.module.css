@@ -16,7 +16,7 @@
     border: 0.5px solid grey;
     font-family: NunitoSansLight;
     margin: 5px auto 5px auto;
-    flex-grow: 1;
+    width: 90%;
 }
 
 .button{
@@ -35,4 +35,12 @@
     font-size: 40px;
     text-align: left;
     margin-top: 0;
+}
+
+.fieldContainer{
+    text-align: center;
+}
+
+.errorText{
+    color: red;
 }

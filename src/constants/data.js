@@ -246,8 +246,60 @@ const PLANT_TIME_INFO = "6 days average to grow";
 const PLANT_NAME_INFO = "Alternate names: Chioggia, red chicory, red leaf chicory, red Italian chicory";
 const PLANT_CHARACTERISTIC_INFO = 'Characteristics: Pronounced "rah-dick-ee-yo," you can find this deep-red-purple §vegetable sold either as a compact round head, as pictured above, or shaped like its relative, endive. The bright coloring makes it stand out. When cooked, the red-purple hue turns brown and what was once bitter becomes sweet.';
 
+const HERB_TIMESPAN = {
+  start: {
+      hour: 8,
+      minute: 0
+  },
+  stop: {
+      hour: 18,
+      minute: 30
+  }
+}
+
+const LEAFY_TIMESPAN = {
+    start: {
+      hour: 10,
+      minute: 0
+  },
+  stop: {
+      hour: 22,
+      minute: 15
+  }
+}
+
+const NIGHT_TIMESPAN = {
+    start: {
+      hour: 22,
+      minute: 0
+  },
+  stop: {
+      hour: 6,
+      minute: 0
+  }
+}
+
+const DEFAULT_TIMESPAN = {
+  start: {
+      hour: 8,
+      minute: 0
+  },
+  stop: {
+        hour: 12,
+        minute: 0
+  }
+}
+
+const LIGHT_TIP = "Pick a time of the day when you'd like your system to be light up.\nBe aware that it should be at least 8 hours per day."
+const WATER_TIP = "Pick a time of the day when you'd like your system to pump water.\nBe aware that it should be at least 8 hours per day."
 
 export {
+    LIGHT_TIP,
+    WATER_TIP,
+    DEFAULT_TIMESPAN,
+    HERB_TIMESPAN,
+    LEAFY_TIMESPAN,
+    NIGHT_TIMESPAN,
     WATER_CONSUMPTION_DATA,
     LEADERBOARD_DATA,
     PLAN_EXAMPLE_DATA_APRIL,

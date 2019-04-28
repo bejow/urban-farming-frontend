@@ -1,7 +1,7 @@
 import React from 'react';
-import {Leaderboard} from '../components/Leaderboard';
-import {LEADERBOARD_DATA} from '../constants/data';
-import CompetitionBox from '../components/CompetitionBox';
+import {Leaderboard} from '../../components/Leaderboard';
+import {LEADERBOARD_DATA} from '../../constants/data';
+import CompetitionBox from '../../components/CompetitionBox';
 
 export default class OverviewScreen extends React.Component{
     render(){
