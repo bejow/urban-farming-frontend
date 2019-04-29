@@ -38,9 +38,7 @@
 
 .image{
     grid-area: img;
-    height: 70%;
-    position: absolute;
-    top:0;
+    height: 105%;
 }
 
 .banner{

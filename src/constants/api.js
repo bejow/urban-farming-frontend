@@ -1,7 +1,18 @@
+<<<<<<< HEAD
 const API_URL = 'http://100.25.205.223/api-fake';
 const GET_TEMPERATURE_ENDPOINT = '/temperature';
 const GET_OXYGEN_ENDPOINT = '/oxygen';
 const GET_PH_ENDPOINT = '/ph';
+=======
+const API_URL = 'http://localhost:1337';
+
+const DEVICE_ENDPOINT = "/device"
+
+const GET_DEVICE_INFO_ENDPOINT = '/';
+const GET_TEMPERATURE_ENDPOINT = DEVICE_ENDPOINT + '/datapoint/temperature';
+const GET_OXYGEN_ENDPOINT = DEVICE_ENDPOINT + '/datapoint/oxygen';
+const GET_PH_ENDPOINT = DEVICE_ENDPOINT + '/datapoint/ph';
+>>>>>>> 7663bc704abda610a1b23d9c3b53a36fffab314b
 const GET_SETTINGS_ENDPOINT = '/settings';
 const LOGIN_ENDPOINT = '/login';
 const LOGOUT_ENDPOINT = '/logout';

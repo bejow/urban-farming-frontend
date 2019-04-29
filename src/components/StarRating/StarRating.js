@@ -8,10 +8,10 @@ export default function StarRating(props) {
     let stars = []
     for (let i = 0; i < numStars; i++){
         if ( i < value ){
-            stars.push(<img src={STAR} onClick={() => onClick(i+1)}/>)
+            stars.push(<img className={styles.image} src={STAR} onClick={() => onClick(i+1)}/>)
         }
         else{
-            stars.push(<img src={STAR_GREY} onClick={() => onClick(i+1)}/>)
+            stars.push(<img className={styles.image} src={STAR_GREY} onClick={() => onClick(i+1)}/>)
         }
     }
     return (

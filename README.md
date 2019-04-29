@@ -1,4 +1,13 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app)
+
+## How to run
+Prequisit: run the json fake backend ("https://github.com/bejow/json_fake_backend")
+
+Setup:<br><br>
+git clone https://github.com/bejow/urban-farming-frontend<br>
+cd urban-farming-frontend<br>
+npm install<br>
+npm start<br>
 
 ## Available Scripts
 

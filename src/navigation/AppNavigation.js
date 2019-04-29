@@ -7,15 +7,6 @@ import logo from '../images/logo.png';
 export default ({user}) => {
     return (
         <div className='navigationContainer'>
-            {renderLinks(user)}
-            <img className={user ? 'navLogo' : 'navLogo login'} src={logo}/>
-        </div>
-    )
-}
-
-const renderLinks = (user) => {
-    if (user){
-        return (
             <div className='navlinkContainer'>
                 <CustomLink exact to='/' icon={ICONS.HOME} label="Dashboard"/>
                 <CustomLink to='/data' icon={ICONS.DIAGRAMM} label={"Data & Details"}/>
@@ -25,6 +16,7 @@ const renderLinks = (user) => {
                 <CustomLink to='/service' icon={ICONS.MAN} label={"Service & Help"}/>
                 <CustomLink to='/settings' icon={ICONS.SETTINGS} label="Settings"/>
             </div>
-        )
-    }
+            <img className='navLogo' src={logo}/>
+        </div>
+    )
 }

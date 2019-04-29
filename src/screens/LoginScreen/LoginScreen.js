@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import {Redirect} from 'react-router-dom';
 
-
-import LoginForm from '../components/LoginForm';
-import {login} from '../actions/AuthActions';
+import styles from './LoginScreen.module.css';
+import {LoginForm} from '../../components/LoginForm';
+import {login} from '../../actions/AuthActions';
+import background_image from '../../images/background_login.png';
 
 class LoginScreen extends Component {
     constructor(props){
@@ -19,8 +19,12 @@ class LoginScreen extends Component {
         }
         else {
         return(
-            <div className='contentContainer' style={{alignItems:"center", justifyContent:"center", height:"80vh"}}>
-                <LoginForm title="Login!" onSubmit={(values) => login(values.username, values.password)}/>
+            <div className="contentContainer">
+                <img src={background_image} className={styles.background}/>
+                <h1 className={styles.title}>Welcome to your rowa -<br/> let's get started!</h1>
+                <div className={styles.container}>
+                    <LoginForm title="Login!" onSubmit={(values) => login(values.username, values.password)}/>
+                </div>
             </div>
         )
         }

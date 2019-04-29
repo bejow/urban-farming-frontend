@@ -34,6 +34,7 @@ export default class InfoScreen extends React.Component{
                         onClick={() => this.onArticleClick("42")}
                     />
                     <InfoBox 
+                        onClick={this.onArticleClick}
                         area={styles.small1} 
                         title="Oxygen, pH value, light, pump – what is it all for?"
                     />
