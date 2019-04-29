@@ -1,4 +1,4 @@
-const API_URL = 'http://localhost:3000';
+const API_URL = 'http://100.25.205.223/api-fake';
 
 const DEVICE_ENDPOINT = "/device"
 
