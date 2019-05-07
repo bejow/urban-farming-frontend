@@ -24,9 +24,6 @@ class Root extends Component {
         return(
             <BrowserRouter>
                 <div className="appContainer">
-                {/* <div className="dataBoxContainer logout" onClick={this.props.logout}>
-                    Logout
-                </div> */}
                 <AppNavigation user={user}/>
                     <PrivateRoute user={user} exact path='/' component={DashboardScreen}/>
                     <PrivateRoute user={user} exact path='/info' component={InfoScreen}/>
@@ -35,9 +32,9 @@ class Root extends Component {
                     <PrivateRoute user={user} path='/plan' component={PlanScreen}/>
                     <PrivateRoute user={user} path='/settings' component={SettingsScreen}/>
                     <PrivateRoute user={user} path='/service' component={ServiceScreen}/>
-                    <PrivateRoute user={user} path="/info/article/:id" component={ArticleScreen} />
-                    <PrivateRoute user={user} path="/info/plants/:id" component={PlantDetailScreen} />
-                    <PrivateRoute user={user} exact path="/info/plants" component={PlantInfoScreen} />
+                    <PrivateRoute user={user} path="/info/article/:id" component={ArticleScreen}/>
+                    <PrivateRoute user={user} path="/info/plants/:id" component={PlantDetailScreen}/>
+                    <PrivateRoute user={user} exact path="/info/plants" component={PlantInfoScreen}/>
                     <Route path='/login' component={LoginScreen}/>
                 </div>
             </BrowserRouter>
@@ -52,3 +49,8 @@ const mapStateToProps = state => {
 }
 
 export default connect(mapStateToProps, {logout})(Root)
+
+
+                /* <div className="dataBoxContainer logout" onClick={this.props.logout}>
+                    Logout
+                </div> */

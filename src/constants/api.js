@@ -1,4 +1,4 @@
-const API_URL = 'http://localhost:3000';
+const API_URL = 'https://localhost:443';
 const GET_TEMPERATURE_ENDPOINT = '/temperature';
 const GET_OXYGEN_ENDPOINT = '/oxygen';
 const GET_PH_ENDPOINT = '/ph'
