@@ -13,11 +13,13 @@ import {API_URL, LOGIN_ENDPOINT, LOGOUT_ENDPOINT} from '../constants/api';
 export const login = ({username, password}) => {
     return (dispatch) => {
         dispatch({ type:LOGIN })
-        fetch(API_URL + LOGIN_ENDPOINT, {
-            headers: {
+        const requestOptions = {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/x-www-form-urlencode' },
+            body: JSON.stringify({ username, password })
+        };
 
-            }
-        })
+        fetch(API_URL + LOGIN_ENDPOINT, requestOptions)
         .then(res => res.json())
         .then(result => {
             dispatch({type:LOGIN_SUCCESS, payload:result}) //handle markus response

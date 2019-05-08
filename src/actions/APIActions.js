@@ -21,11 +21,14 @@ import {
     GET_SETTINGS_ENDPOINT 
 } from '../constants/api';
 
-export const getCurrentOxygen = () => {
+export const getCurrentOxygen = (token) => {
     return (dispatch => {
         dispatch({type:FETCH_CURRENT_OXYGEN});
         fetch(API_URL + GET_OXYGEN_ENDPOINT, {
-            headers: {'Content-Type':'application/json'},
+            headers: {
+                'Content-Type':'application/json',
+                'Authorization': `Bearer ${token}`
+            },
         })
         .then(res => res.json())
         .then((result) => {
@@ -38,11 +41,14 @@ export const getCurrentOxygen = () => {
     })
 }
 
-export const getCurrentPH = () => {
+export const getCurrentPH = (token) => {
     return (dispatch => {
         dispatch({type:FETCH_CURRENT_PH});
         fetch(API_URL + GET_PH_ENDPOINT, {
-            headers: {'Content-Type':'application/json'},
+            headers: {
+                'Content-Type':'application/json',
+                'Authorization': `Bearer ${token}`
+            },
         })
         .then(res => res.json())
         .then((result) => {
@@ -55,11 +61,14 @@ export const getCurrentPH = () => {
     })
 }
 
-export const getCurrentTemperature = () => {
+export const getCurrentTemperature = (token) => {
     return (dispatch => {
         dispatch({type:FETCH_CURRENT_TEMPERATURE});
         fetch(API_URL + GET_TEMPERATURE_ENDPOINT, {
-            headers: {'Content-Type':'application/json'},
+            headers: {
+                'Content-Type':'application/json',
+                'Authorization': `Bearer ${token}`
+            },
         })
         .then(res => res.json())
         .then((result) => {
@@ -74,10 +83,15 @@ export const getCurrentTemperature = () => {
     })
 }
 
-export const getSettings = () => {
+export const getSettings = (token) => {
     return (dispatch => {
         dispatch({type:FETCH_SETTINGS});
-        fetch(API_URL + GET_SETTINGS_ENDPOINT)
+        fetch(API_URL + GET_SETTINGS_ENDPOINT, {
+            headers: {
+                'Content-Type':'application/json',
+                'Authorization': `Bearer ${token}`
+            }
+        })
         .then(res => res.json())
         .then((result) => {
             dispatch({type:FETCH_SETTINGS_SUCCESS, payload: result})

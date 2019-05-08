@@ -27,7 +27,8 @@
     "start": "set HTTPS=true&&react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "prod": "nodemon ./server/server.js"
   },
   "eslintConfig": {
     "extends": "react-app"
